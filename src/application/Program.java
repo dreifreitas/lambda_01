@@ -1,7 +1,6 @@
 package application;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
@@ -21,11 +20,8 @@ public class Program {
         products.add(pdt1);
         products.add(pdt2);
         products.add(pdt3);
-
-        Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-        
-
-        products.sort(comp);
+    
+        products.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 
         for (Product p : products) {
             System.out.println(p);
